@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    /* background-color: #ae8bd3; */
+    background-color: #eee;
 }
 
 .thumbnail {
@@ -23,15 +23,6 @@ body {
 
 .form-control {
     height: 32px;
-}
-
-.h4, h4 {
-    width: auto;
-    float: left;
-    font-size: 20px;
-    line-height: 1.1;
-    margin-top: 5px;
-    margin-bottom: 5px;
 }
 
 .controls {
@@ -142,19 +133,191 @@ button {
 ******************/
 
 h1 {
-    text-shadow: -6px 6px rgba(0, 0, 0, 0.2);
-    font-size: 5rem;
+    text-shadow: -3px 3px rgba(0, 0, 0, 0.2);
+    font-size: 3rem;
+    margin: 0;
 }
 
-.page-header {
-    width: 100vw;
-    background-color: #8550BD;
-    color: white;
-    height: 200px;
-    padding: 50px 0;
-    margin: 0;
-    border: none;
+h2 {
+
 }
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.container_box {
+    border-radius: 5px;
+    background-color: white;
+    margin: 15px 0;
+    box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.2);
+}
+
+    .container_header {
+        background-color: #6b7a88;
+        padding: 10px;
+        color: white;
+        font-weight: 600;
+        text-align: center;
+        border-radius: 5px 5px 0 0;
+        letter-spacing: 0.5px;
+    }
+
+    .container_body {
+        padding: 15px 10px;
+    }
+
+.navbar_container {
+    width: 100vw;
+    background-color: #6b7a88;
+    color: white;
+    height: 80px;
+    padding: 20px 50px;
+}
+
+    #title {
+        display: inline;
+    }
+
+    .navbar_icon {
+        line-height: 15px;
+        display: inline;
+        color: white;
+        float: right;
+        height: 100%;
+        margin: 0 10px;
+        border: 2px solid white;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+
+        .navbar_icon:hover {
+            background-color: white;
+            color: #6b7a88;
+            cursor: pointer;
+        }
+
+.timer_container {
+
+}
+
+    .time {
+        font-size: 8rem;
+        line-height: 80px;
+    }
+
+    .timer_controls {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        margin-top: 10px;
+    }
+
+        .button {
+            border: 2px solid #6b7a88;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 8px 15px;
+            text-align: center;
+            color: #6b7a88;
+            font-weight: 600;
+            font-size: 1.6rem;
+        }
+
+            .button:hover {
+                cursor: pointer;
+                background-color: #6b7a88;
+                color: white;
+            }
+
+        .announcements-container {
+
+        }
+
+            .announcements-container > div {
+
+            }
+
+.section_container {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+    .section_number {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        background-color: #6b7a88;
+        color: white;
+        font-weight: bold;
+        font-size: 3rem;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    .section_instructions {
+        font-size: 16px;
+        padding-left: 20px;
+        font-weight: 600;
+        color: #474747;
+    }
+
+        .sub_instructions {
+            font-size: 14px;
+            margin-left: 50px;
+        }
+
+    #instr_step1 {
+        background-color: #2980b9;
+    }
+
+        .highlight1 {
+            color: #2980b9;
+        }
+
+    #instr_step2 {
+        background-color: #2ecc71;
+    }
+
+        .highlight2 {
+            color: #2ecc71;
+        }
+
+    #instr_step3 {
+        background-color: #e74c3c;
+    }
+
+        .highlight3 {
+            color: #e74c3c;
+        }
+
+    #instr_step4 {
+        background-color: #9b59b6;
+    }
+
+        .highlight4 {
+            color: #9b59b6;
+        }
+
+    #instr_step5 {
+        background-color: #f39c12;
+    }
+
+        .highlight5 {
+            color: #f39c12;
+        }
+
+    #instr_step6 {
+        background-color: #0abde3;
+    }
+
+        .highlight6 {
+            color: #0abde3;
+        }
 
 .animal-table {
     font-size: 80px;
@@ -165,6 +328,97 @@ h1 {
     .animal-table th {
         padding: 0 40px;
     }
+
+.step_container {
+    border-top: 20px solid #8550BD;
+    border-bottom: 20px solid #8550BD;
+    background-color: white;
+    height: calc(100vh - 115px);
+    margin-top: 15px;
+    box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.2);
+    margin-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+    .question_section {
+        background-color: #eae2f5;
+        min-height: 200px;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #step1 {
+        border-top: 20px solid #2980b9;
+        border-bottom: 20px solid #2980b9;
+    }
+
+        #step1 > .question_section {
+            background-color: #2a80b930;
+        }
+
+    #step2 {
+        border-top: 20px solid #2ecc71;
+        border-bottom: 20px solid #2ecc71;
+    }
+
+        #step2 > .question_section {
+            background-color: #2fcd7030;
+        }
+
+    #step3 {
+        border-top: 20px solid #e74c3c;
+        border-bottom: 20px solid #e74c3c;
+    }
+
+        #step3 > .question_section {
+            background-color: #e84b3c3d;
+        }
+
+    #step4 {
+        border-top: 20px solid #9b59b6;
+        border-bottom: 20px solid #9b59b6;
+    }
+
+    #step5 {
+        border-top: 20px solid #f39c12;
+        border-bottom: 20px solid #f39c12;
+    }
+
+        #step5 > .question_section {
+            background-color: #f39c1230;
+        }
+
+    #step6 {
+        border-top: 20px solid #0abde3;
+        border-bottom: 20px solid #0abde3;
+    }
+
+        #step6 > .question_section {
+            background-color: #0abee32b;
+        }
+
+.in-progress_section {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .animal_icon {
+        width: 40%;
+        height: 40%;
+        margin: 5px;
+        -webkit-filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+        filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+        transition: all 1s ease;
+    }
+
+        .question_section > .animal_icon {
+            height: 37%;
+        }
+
 
 #decode-img:hover, #grab-img:hover {
     cursor: default;

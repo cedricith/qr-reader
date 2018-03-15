@@ -8,6 +8,12 @@
 (function(undefined) {
     "use strict";
 
+    window.onload = function() {
+        // if ($(".section_container > .section_number").html() == "1") {
+        //     console.log("1 detected!");
+        // }
+    };
+
     window.setInterval(function(){
         $('#title').addClass('animated tada');
         setTimeout(function(){
@@ -28,8 +34,8 @@
         play = Q("#play"),
         scannedImg = Q("#scanned-img"),
         scannedQR = Q("#scanned-QR"),
-        grabImg = Q("#grab-img"),
-        decodeLocal = Q("#decode-img"),
+        //grabImg = Q("#grab-img"),
+        //decodeLocal = Q("#decode-img"),
         pause = Q("#pause"),
         stop = Q("#stop"),
         contrast = Q("#contrast"),
@@ -119,13 +125,13 @@
             }
         },
         cameraSuccess: function() {
-            grabImg.classList.remove("disabled");
+            //grabImg.classList.remove("disabled");
         }
     };
     var decoder = new WebCodeCamJS("#webcodecam-canvas").buildSelectMenu("#camera-select", "environment|back").init(args);
-    decodeLocal.addEventListener("click", function() {
-        Page.decodeLocalImage();
-    }, false);
+    // decodeLocal.addEventListener("click", function() {
+    //     Page.decodeLocalImage();
+    // }, false);
     play.addEventListener("click", function() {
         if (!decoder.isInitialized()) {
             scannedQR[txt] = "Scanning ...";
@@ -134,19 +140,19 @@
             decoder.play();
         }
     }, false);
-    grabImg.addEventListener("click", function() {
-        if (!decoder.isInitialized()) {
-            return;
-        }
-        var src = decoder.getLastImageSrc();
-        scannedImg.setAttribute("src", src);
-    }, false);
+    // grabImg.addEventListener("click", function() {
+    //     if (!decoder.isInitialized()) {
+    //         return;
+    //     }
+    //     var src = decoder.getLastImageSrc();
+    //     scannedImg.setAttribute("src", src);
+    // }, false);
     pause.addEventListener("click", function(event) {
         scannedQR[txt] = "Paused";
         decoder.pause();
     }, false);
     stop.addEventListener("click", function(event) {
-        grabImg.classList.add("disabled");
+        //grabImg.classList.add("disabled");
         scannedQR[txt] = "Stopped";
         decoder.stop();
     }, false);
@@ -229,12 +235,12 @@
             }
         }
     };
-    Page.decodeLocalImage = function() {
-        if (decoder.isInitialized()) {
-            decoder.decodeLocalImage(imageUrl.value);
-        }
-        imageUrl.value = null;
-    };
+    // Page.decodeLocalImage = function() {
+    //     if (decoder.isInitialized()) {
+    //         decoder.decodeLocalImage(imageUrl.value);
+    //     }
+    //     imageUrl.value = null;
+    // };
     var getZomm = setInterval(function() {
         var a;
         try {
